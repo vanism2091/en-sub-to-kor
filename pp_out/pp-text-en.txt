@@ -1,6 +1,9 @@
-[MUSIC PLAYING]  DAVID MALAN: All right, this is CS50, Harvard University's introduction to the intellectual enterprises of computer science and the art of programming, back here on campus in beautiful Sanders Theatre for the first time in quite a while.
+[MUSIC PLAYING]
+DAVID MALAN: All right, this is CS50, Harvard University's introduction to the intellectual enterprises of computer science and the art of programming, back here on campus in beautiful Sanders Theatre for the first time in quite a while.
 So welcome to the class.
-My name is David-- OK. [CHEERING AND APPLAUSE] So my name is David Malan.
+My name is David-- OK.
+[CHEERING AND APPLAUSE]
+So my name is David Malan.
 And I took this class myself some time ago, but almost didn't.
 It was sophomore fall and I was sitting in on the class.
 And I was a little curious but, eh, it didn't really feel like the field for me.
@@ -39,8 +42,7 @@ And so, as such, there's these fringe benefits of just learning to think like a 
 And it doesn't take all that much to start doing so.
 This, for instance, is perhaps the simplest picture of computer science, sure, but really problem solving in general.
 Problems are all about taking input, like the problem you want to solve.
-You want to get the solution, a.k.a.
-output.
+You want to get the solution, a.k.a. output.
 And so, something interesting has got to be happening in here, in here, when you're trying to get from those inputs to outputs.
 Now, in the world of computers specifically, we need to decide in advance how we represent these inputs and outputs.
 We all just need to decide, whether it's Macs or PCs or phones or something else, that we're all going to speak some common language, irrespective of our human languages as well.
@@ -149,7 +151,8 @@ Add another light bulb, another switch.
 And, indeed, computers have standardized just how many zeros and ones, or bits or switches, they throw at these kinds of problems.
 And, in fact, most computers would typically use at least eight at a time.
 And even if you're only counting as high as three or seven, you would still use eight and have a whole bunch of zeros.
-But that's OK, because the computers these days certainly have so many more, thousands, millions of transistors and switches that that's quite OK. All right, so, with that said, if we can now count as high as seven or, frankly, as high as we want, that only seems to make computers useful for things like Excel, like number crunching.
+But that's OK, because the computers these days certainly have so many more, thousands, millions of transistors and switches that that's quite OK.
+All right, so, with that said, if we can now count as high as seven or, frankly, as high as we want, that only seems to make computers useful for things like Excel, like number crunching.
 But computers, of course, let you send text messages, write documents, and so much more.
 So how would a computer represent something like a letter, like the letter A of the English alphabet, if, at the end of the day, all they have is switches?
 Any thoughts?
@@ -158,7 +161,8 @@ AUDIENCE: You can represent letters in numbers.
 DAVID MALAN: OK, so we could represent letters using numbers.
 OK, so what's a proposal?
 What number should represent what?
-AUDIENCE: Say if you were starting at the beginning of the alphabet, you could say 1 is A, 2 is B, 3 is C. DAVID MALAN: Perfect.
+AUDIENCE: Say if you were starting at the beginning of the alphabet, you could say 1 is A, 2 is B, 3 is C.
+DAVID MALAN: Perfect.
 Yeah, we just all have to agree somehow that one number is going to represent one letter.
 So 1 is A, 2 is B, 3 is C, Z is 26, and so forth.
 Maybe we can even take into account uppercase and lowercase.
@@ -188,7 +192,8 @@ I like that.
 Other thoughts?
 How might a computer distinguish these two?
 Yeah.
-AUDIENCE: Have a different file format, so, like, odd text or just check the graphic or-- DAVID MALAN: Indeed, and that's spot-on.
+AUDIENCE: Have a different file format, so, like, odd text or just check the graphic or--
+DAVID MALAN: Indeed, and that's spot-on.
 Nothing wrong with what you suggested, but the world generally does just that.
 The reason we have all of these different file formats in the world, like JPEG and GIF and PNGs and Word documents, .docx, and Excel files and so forth, is because a bunch of humans got in a room and decided, well, in the context of this type of file, or really, more specifically, in the context of this type of program, Excel versus Photoshop versus Google Docs or the like, we shall interpret any patterns of zeros and ones as being maybe numbers for Excel, maybe letters in, like, a text messaging program or Google Docs, or maybe even colors of the rainbow in something like Photoshop and more.
 So it's context dependent.
@@ -277,7 +282,8 @@ Questions, then, on these representations of formats, be it numbers or letters, 
 Yeah?
 AUDIENCE: Why is decimal popular for a computer if binary is the basis for everything?
 DAVID MALAN: Sorry, why is what so popular?
-AUDIENCE: Why is the decimal popular if binary is the fundamental-- DAVID MALAN: Yeah, so we'll come back to this in a few weeks, in fact.
+AUDIENCE: Why is the decimal popular if binary is the fundamental--
+DAVID MALAN: Yeah, so we'll come back to this in a few weeks, in fact.
 There are other ways to represent numbers.
 Binary is one.
 Decimal is another.
@@ -290,7 +296,8 @@ And it's just a very convenient unit of measure.
 And it's also human convention in the world of files and other things.
 But we'll come back to that soon.
 Other questions?
-AUDIENCE: Do the lights on the stage supposedly say that-- DAVID MALAN: Do the lights on the stage supposedly say anything?
+AUDIENCE: Do the lights on the stage supposedly say that--
+DAVID MALAN: Do the lights on the stage supposedly say anything?
 Well, if we had thought in advance to use maybe 64 light bulbs, that would seem to give us 8 total bytes on stage, 8 times 8, giving us just that.
 Maybe.
 Good question.
@@ -303,7 +310,8 @@ There we go.
 Sorry.
 Very bright in this corner.
 AUDIENCE: I was just going to ask about the 255 bits, like with the maximum characters.
-[INAUDIBLE] DAVID MALAN: Ah, sure, and we'll come back to this, in some form, in the coming days too, at a slower pace too, we have, with eight bits, two possible values for the first and then two for the next, two for the next, and so forth.
+[INAUDIBLE]
+DAVID MALAN: Ah, sure, and we'll come back to this, in some form, in the coming days too, at a slower pace too, we have, with eight bits, two possible values for the first and then two for the next, two for the next, and so forth.
 So that's 2 times 2 times 2.
 That's 2 to the eighth power total, which means you can have 256 total possible patterns of zeros and ones.
 But as we'll see soon computer scientists, programmers, software often starts counting at 0 by convention and if you use one of those patterns, 00000000 to represent the decimal number we know is zero, you only have 255 other patterns left to count as high as therefore 255.
@@ -315,7 +323,8 @@ Well let me ask the question again.
 How might a computer, do you think, knowing what you know now, represents something like a color?
 Like what are our options if all we've got are zeros and ones and switches?
 Yeah?
-AUDIENCE: RGB DAVID MALAN: RGB.
+AUDIENCE: RGB
+DAVID MALAN: RGB.
 RGB indeed is this acronym that represents some amount of red and some amount of green and blue and indeed computers can represent colors by just doing that.
 Remembering, for instance, this dot.
 This yellow dot on the screen that might be part of any of those emojis these days, well that's some amount of red, some amount of green, some amount of blue.
@@ -349,8 +358,10 @@ How would a computer, knowing what we know now, represent something like a video
 How might you represent a video using only zeros and ones?
 Yeah?
 AUDIENCE: As we can see here, they represent images, right?
-[INAUDIBLE] sounds of the 0 and 1s as well.
-[INAUDIBLE] DAVID MALAN: Yeah, exactly.
+[INAUDIBLE]
+sounds of the 0 and 1s as well.
+[INAUDIBLE]
+DAVID MALAN: Yeah, exactly.
 To summarize, what video really adds is just some notion of time.
 It's not just one image, it's not just one letter or a number, it's presumably some kind of sequence because time is passing.
 So with a whole bunch of images, maybe 24 maybe 30 per second, if you fly them by the human's eyes, we can interpret them using our eyes and brain that there is now movement and therefore video.
@@ -359,7 +370,9 @@ If we just came up with some convention for representing those same notes on a m
 And this might be actually pretty familiar.
 Let me pull up a quick video here, which happens to be an old school version of the same idea.
 You might remember from childhood.
-[MUSIC PLAYING] [CLICKING] So granted that particular video is an actual video of a paper-based animation, but indeed, that's really all you need, is some sequence of these images, which themselves of course are just zeros and ones because they're just this grid of these pixels or dots.
+[MUSIC PLAYING]
+[CLICKING]
+So granted that particular video is an actual video of a paper-based animation, but indeed, that's really all you need, is some sequence of these images, which themselves of course are just zeros and ones because they're just this grid of these pixels or dots.
 Now something like musical notes like these, those of you who are musicians might just naturally play these on physical devices, but computers can certainly represent those sounds, too.
 For instance, a popular format for audio is called MIDI and MIDI might just represent each note that you saw a moment ago essentially as a sequence of numbers.
 But more generally, you might think about music as having notes, for instance, A through G, maybe some flats and some sharps, you might have the duration like how long is the note being heard or played on a piano or some other device, and then just the volume like how hard does a human in the real world press down on that key and therefore how loud is that sound?
@@ -441,11 +454,13 @@ We don't have to completely throw out this algorithm.
 I think we can probably go roughly twice as fast still.
 But what should we do instead to fix this?
 Yeah, in back.
-AUDIENCE: [INAUDIBLE] DAVID MALAN: Nice.
+AUDIENCE: [INAUDIBLE]
+DAVID MALAN: Nice.
 So I think what many of us, most of us, if we even use this technology any more these days, we might go roughly to the middle of the phone book just to kind of get us started.
 And now I'm looking down, I'm looking for J, assuming first name, J Harvard, and it looks like I'm in the M section.
 So just to be clear, what should I do next?
-AUDIENCE: [INAUDIBLE] DAVID MALAN: OK, and presumably it is John Harvard would be to the left of this.
+AUDIENCE: [INAUDIBLE]
+DAVID MALAN: OK, and presumably it is John Harvard would be to the left of this.
 So here's an opportunity to figuratively and literally tear this particular problem in half, throw half of the problem away.
 It's actually pretty easy if you just do it that way.
 The hard way is this way.
@@ -690,7 +705,8 @@ Let me go ahead and zoom out, hit Stop, and hit Play.
 All right, what's your name?
 D-A-V-I-D, Enter, and voila.
 Now it's presumably as we first intended.
-[APPLAUSE] (LAUGHING) Oh, thank you.
+[APPLAUSE]
+(LAUGHING) Oh, thank you.
 Thank you.
 No minus 2 this time.
 So consider that even with this additional example, it still fits the same mental model, but in a little more interesting way.
@@ -725,44 +741,53 @@ So now let me stop the old version.
 Let me start the new.
 What's your name?
 Type in David.
-And voila: PROGRAM: Hello, banana.
+And voila:
+PROGRAM: Hello, banana.
 DAVID MALAN: (LAUGHING) OK, minus 2 for real.
 All right, so what I accidentally threw away there, intentionally for instructional purposes, was the actual answer that came back from the ask block.
 That's embarrassing.
 So now if I play this again, let's click the green icon.
 What's your name?
 David.
-And now: PROGRAM: Hello, David.
+And now:
+PROGRAM: Hello, David.
 DAVID MALAN: There we go.
 Hello, David.
 All right, thank you.
-[APPLAUSE] OK, so we have these functions then in place, but what more can we do?
+[APPLAUSE]
+OK, so we have these functions then in place, but what more can we do?
 Well what about those conditionals and loops and other constructs?
 How can we bring these programs to life so it's not just clicking a button and voila, something's happening?
 Let's go ahead and make this now even more interactive.
 Let me go ahead and throw away most of these pieces and let me just spice things up with some more audio under Sound.
 I'm going to go to Play Sound Meow until done.
 Here we go, green flag.
-[MEOW] OK, it's a little loud, but it did exactly do what it said.
+[MEOW]
+OK, it's a little loud, but it did exactly do what it said.
 Let's hear it again.
-[QUIETER MEOW] OK.
+[QUIETER MEOW]
+OK.
 It's kind of an underwhelming program eventually since you'd like to think that the cat would just meow on its own, but.
-[MEOW] I have to keep hitting the button.
+[MEOW]
+I have to keep hitting the button.
 Well this seems like an opportunity for doing something again and again.
 So all right, well if I wanted to meow, meow, meow, let me just grab a few of these, or you can even right click or Control click and you can Copy Paste even in code here.
 Let me play this now.
-[THREE MEOWS] All right, so now like it's not really emoting happiness in quite the same way.
+[THREE MEOWS]
+All right, so now like it's not really emoting happiness in quite the same way.
 It might be hungry or upset.
 So let's slow it down.
 Let me go to Control, wait one second in between, which might be a little less worrisome.
 Here we go, Play.
-[THREE SLOWER MEOWS] OK, so if my goal was to make the cat meow three times, I dare say this code or algorithm is correct.
+[THREE SLOWER MEOWS]
+OK, so if my goal was to make the cat meow three times, I dare say this code or algorithm is correct.
 But let's now critique its design.
 Is this well-designed?
 And if not, why not?
 What are your thoughts here?
 Yeah?
-AUDIENCE: You could use the forever or a repeat to make it more-- DAVID MALAN: Yeah, so yeah, agreed.
+AUDIENCE: You could use the forever or a repeat to make it more--
+DAVID MALAN: Yeah, so yeah, agreed.
 I could use forever or repeat, but let me push a little harder.
 But why?
 Like this works, I'm kind of done with the assignments, what's bad about it?
@@ -776,7 +801,8 @@ And indeed, what I alluded to being possible, copy pasting earlier, doesn't mean
 And in code, generally speaking, when you start to copy and paste puzzle pieces or text next week, you're probably not doing something quite well.
 So let me go ahead and throw away most of these to get rid of the duplication, keeping just two of the blocks that I care about.
 Let me grab the Repeat block for now, let me move this inside of the Repeat block, it's going to grow to fit it, let me reconnect all this and change the 10 just to a 3, and now, Play.
-[THREE SLOW MEOWS] So, better.
+[THREE SLOW MEOWS]
+So, better.
 It's the same thing.
 It's still correct, but now I've set the stage to let the cat meow, for instance, four times by changing one thing, 40 times by changing one thing, or it could just use the Forever block and just walk away and it will meow forever instead.
 If that's your goal, that would be better.
@@ -794,7 +820,8 @@ Here I see a slightly different interface where I can choose a name for it and I
 I'm going to keep it simple.
 That's it.
 No inputs to meow yet.
-I'm just going to click OK. Now I'm just going to clean this up a bit here.
+I'm just going to click OK.
+Now I'm just going to clean this up a bit here.
 Let me drag and drop Play Sound and Wait over here.
 And you know what?
 I'm just going to drag this way down here, way down here because now that I'm done implementing Meow, I'm going to literally abstract it away, sort of out of sight, out of mind, because now notice at top left there is a new pink puzzle piece called Meow.
@@ -815,7 +842,8 @@ Well let me go ahead and zoom out and scroll down.
 Let me right click or Control click on the pink piece here and choose Edit, or I could just start from scratch, no pun intended, with a new one.
 Now here, rather than just give this thing a name Meow, let me go ahead and add an input here.
 I'm going to go ahead and type in, for instance, n, for number of times to meow, and just to make this even more user friendly and self descriptive, I'm going to add a label, which has no functional impact, it's just an aesthetic, and I'm just going to say Times, just to make it read more like English in this case that tells me what the puzzle piece does.
-Now I'm going to click OK. And now I need to refine this a little bit.
+Now I'm going to click OK.
+And now I need to refine this a little bit.
 Let me go ahead and grab under Control a repeat block, let me move the Play, Sound, and Wait, into the repeat block.
 I don't want 10 and I also don't want 3 here.
 What I want now is this n that is my actual variable that Scratch is creating for me that represents whatever input the human programmer provides.
@@ -851,15 +879,18 @@ All right, so here it is to be clear.
 When the green flag is clicked, ask the question, if the cat is touching the mouse pointer then place sound meow.
 Here we go.
 Play.
-[SILENCE] All right, let's try again.
+[SILENCE]
+All right, let's try again.
 Play.
-[SILENCE] Huh.
+[SILENCE]
+Huh.
 I'm worried it's not Scratch's fault.
 Feels like mine.
 What's the bug here?
 Why doesn't this work?
 Yeah, in back, who just turned.
-AUDIENCE: [INAUDIBLE] DAVID MALAN: Yeah, the problem is the moment I click that green flag, Scratch asks the question, is the cat touching the mouse pointer?
+AUDIENCE: [INAUDIBLE]
+DAVID MALAN: Yeah, the problem is the moment I click that green flag, Scratch asks the question, is the cat touching the mouse pointer?
 And obviously it's not because the cursor was like up there a moment ago and it's not down there.
 It's fine if I move the cursor down there, but too late.
 The program already asked the question.
@@ -873,9 +904,11 @@ The Forever loop.
 So I could indeed use this Forever loop because if I want my program to just constantly listen to me, well let's literally do something forever, or at least forever as long as the program is running until I explicitly hit Stop.
 So let me grab that.
 Let me go to Control, let me grab the Forever block, let me move the If inside of this Forever block, reconnect this, go back up here, click the green flag, and now nothing's happened yet, but let me try moving my cursor now.
-[MEOW] Oh.
+[MEOW]
+Oh.
 So now.
-[MEOW] That's kind of cute.
+[MEOW]
+That's kind of cute.
 So now the cat is actually responding and it's going to keep doing this again and again.
 So now we have this idea of taking these different ideas, these different puzzle pieces, assembling them into something more complicated.
 I could definitely put a name to this.
@@ -888,18 +921,28 @@ Instead of the green flag clicked, actually, I'm going to say when the video mot
 And then I'm going to get out of the way.
 So here's the cat.
 We'll put them on top of there.
-[MEOW] OK. All right, and here we go.
-[MEOW] So my hand is moving faster than 50 something or other, whatever the unit of measure is.
-[MEOW] AUDIENCE: Aw.
+[MEOW]
+OK.
+All right, and here we go.
+[MEOW]
+So my hand is moving faster than 50 something or other, whatever the unit of measure is.
+[MEOW]
+AUDIENCE: Aw.
 DAVID MALAN: (LAUGHING) Thank you.
 So now we have an even more interactive version.
-[MEOW] But I think if I sort of slowly.
-[LAUGHING] (LAUGHING) Right?
-It's completely creepy, but I'm not like exceeding the threshold-- [MEOW] Until finally my hand moves as fast as that.
+[MEOW]
+But I think if I sort of slowly.
+[LAUGHING]
+(LAUGHING) Right?
+It's completely creepy, but I'm not like exceeding the threshold-- [MEOW]
+Until finally my hand moves as fast as that.
 And so here actually is an opportunity to show you something a former student did.
-Let me go ahead here and-- [MEOW TWICE] OK, got to stop this.
+Let me go ahead here and-- [MEOW TWICE]
+OK, got to stop this.
 Let me go ahead and zoom out of this in just a moment.
-[MEOW] If someone would be-- [LAUGHING] (LAUGHING) If someone would be comfortable coming up not only masked but also on camera on the internet I thought we'd play one of your former classmate's projects here up on stage.
+[MEOW]
+If someone would be-- [LAUGHING]
+(LAUGHING) If someone would be comfortable coming up not only masked but also on camera on the internet I thought we'd play one of your former classmate's projects here up on stage.
 Would anyone like to volunteer here and be up on stage?
 Who's that?
 Yeah.
@@ -909,7 +952,10 @@ AUDIENCE: Sahar.
 DAVID MALAN: Sahar.
 All right, come on down.
 Let me get it set up for you here.
-[MEOW] [APPLAUSE] [MEOW] All right, let me go ahead and full screen this here.
+[MEOW]
+[APPLAUSE]
+[MEOW]
+All right, let me go ahead and full screen this here.
 So this is whack-a-mole by one of your firmer predecessors.
 It's going to use the camera focusing on your head, which will have to position inside of this rectangle.
 Have you ever played the whack-a-mole game at an arcade?
@@ -918,25 +964,34 @@ DAVID MALAN: OK.
 So for those who haven't, these little moles pop up and with a very fuzzy hammer you sort of hit down.
 You though, if you don't mind, you're going to use your head to do this virtually.
 So let's line up your head with this red rectangle, if you could, we'll do beginner.
-[MUSIC PLAYING] All right, here we go.
+[MUSIC PLAYING]
+All right, here we go.
 Sahar.
 Give it a moment.
 OK, come a little closer.
-[DINGING] And now hit the moles with your head.
-[DING] There we go, one point.
-[DING] One point.
-[DINGING] Nice.
+[DINGING]
+And now hit the moles with your head.
+[DING]
+There we go, one point.
+[DING]
+One point.
+[DINGING]
+Nice.
 15 seconds to go.
 There we go.
 Oh yeah.
 One point.
-[LAUGHING] [DINGING] Six seconds.
+[LAUGHING]
+[DINGING]
+Six seconds.
 AUDIENCE: Oh no.
 DAVID MALAN: There we go.
 Quick!
-[DINGING] All right, a round of applause for Sahar.
+[DINGING]
+All right, a round of applause for Sahar.
 Thank you.
-[APPLAUSE] So beyond having a little bit of fun here, the goal was to demonstrate that by using some fairly simple, primitive, some basic building blocks but assembling them in a fun way with some music, maybe some new costumes or artwork, you can really bring programs to life.
+[APPLAUSE]
+So beyond having a little bit of fun here, the goal was to demonstrate that by using some fairly simple, primitive, some basic building blocks but assembling them in a fun way with some music, maybe some new costumes or artwork, you can really bring programs to life.
 But at the end of the day, the only puzzle pieces really involved were ones like the ones I just dragged and dropped and a few more, because there were clearly lots of moles.
 So the student probably created a few different sprites, not a single cap, but at least four different moles.
 They had like some kind of graphic on the screen that showed Sahar where to position her head.
@@ -947,22 +1002,32 @@ So indeed if we rewind a little bit.
 Let me go ahead here and introduce a program that I myself made back in graduate school when Scratch was first being developed by MIT.
 Let me go ahead and open here, give me just one second, something that I called back in the day Oscar Time that looks a little something like this.
 If I fullscreen it and hit Play.
-[MUSIC - SESAME STREET, "I LOVE TRASH"] OSCAR THE GROUCH: (SINGING) Oh, I love trash.
+[MUSIC - SESAME STREET, "I LOVE TRASH"]
+OSCAR THE GROUCH: (SINGING) Oh, I love trash.
 DAVID MALAN: So you'll notice a piece of trash is falling.
-I can click on it and drag and as I get close and close to the trash can notice OSCAR THE GROUCH: (SINGING) Anything ragged or-- DAVID MALAN: It wants to go in, it seems.
-And if I let go-- OSCAR THE GROUCH: (SINGING) Yes, I-- DAVID MALAN: One point.
+I can click on it and drag and as I get close and close to the trash can notice
+OSCAR THE GROUCH: (SINGING) Anything ragged or--
+DAVID MALAN: It wants to go in, it seems.
+And if I let go--
+OSCAR THE GROUCH: (SINGING) Yes, I--
+DAVID MALAN: One point.
 Here comes another.
-OSCAR THE GROUCH: (SINGING) If you really want to see something trashy-- DAVID MALAN: I'll do the same, two points.
-OSCAR THE GROUCH: (SINGING) I have here a sneaker that's tattered and worn-- DAVID MALAN: There's a sneaker falling from the sky, so another sprite of some sort.
+OSCAR THE GROUCH: (SINGING) If you really want to see something trashy--
+DAVID MALAN: I'll do the same, two points.
+OSCAR THE GROUCH: (SINGING) I have here a sneaker that's tattered and worn--
+DAVID MALAN: There's a sneaker falling from the sky, so another sprite of some sort.
 OSCAR THE GROUCH: (SINGING) The laces are torn.
-A gift from my mother-- DAVID MALAN: I can also get just a little lazy and just let them fall into the trash themself if I want to.
+A gift from my mother--
+DAVID MALAN: I can also get just a little lazy and just let them fall into the trash themself if I want to.
 So you can see it doesn't have to do with my mouse cursor, it has to do apparently with the distance here.
 Let's listen a little further.
 I think some additional trash is about to make its appearance.
 Presumably there's some kind of variable that's keeping track of this score.
-OSCAR THE GROUCH: (SINGING) I love-- DAVID MALAN: OK, let's see what the last chorus here is.
+OSCAR THE GROUCH: (SINGING) I love--
+DAVID MALAN: OK, let's see what the last chorus here is.
 OSCAR THE GROUCH: (SINGING) Rotten stuff.
-I have here some newspaper, crusty and DAVID MALAN: OK, and thus he continues.
+I have here some newspaper, crusty and
+DAVID MALAN: OK, and thus he continues.
 And the song actually goes on and on and on and I do not have fond memories of implementing this and hearing this song for like 10 straight hours, but it's a good example to just consider how was this program composed?
 How did I go about implementing it the first time around?
 And let me go ahead and open up some programs now that I wrote in advance just so that we could see how these things are assembled.
@@ -986,7 +1051,8 @@ Notice at bottom right I change the default cat to a picture of a trashcan, inst
 And then over here I added this code.
 When the green flag is clicked, switch the costume to something I arbitrarily called Oscar 1.
 So I found a couple of different pictures of a trash can, one that looks closed, one that looks partly open, and eventually one that has Oscar coming out, and I just gave them different names.
-So I said Switch to Oscar 1, which is the closed one by default, then forever do the following: if touching the mouse pointer, then switch the costume to Oscar 2, else switch to Oscar 1.
+So I said Switch to Oscar 1, which is the closed one by default,
+then forever do the following: if touching the mouse pointer, then switch the costume to Oscar 2, else switch to Oscar 1.
 That is to say, I just wanted to implement this idea of the can opening and closing, even if it's not exactly what I wanted ultimately, I just wanted to make some forward progress.
 So here, when I run this program by clicking Play, notice what happens.
 Nothing yet, but if I get closer to the trash can, it indeed pops open because it's forever listening for whether the sprite, the trash can in this case, is touching the mouse pointer.
@@ -1081,7 +1147,8 @@ And left, left, left, left, left, left, left, left, left, left, left, left, left
 So before we look at the code, how might this be working?
 What kinds of scripts, collections of puzzle pieces, might collectively help us implement this?
 What do you think?
-AUDIENCE: [INAUDIBLE] DAVID MALAN: Perfect, yeah.
+AUDIENCE: [INAUDIBLE]
+DAVID MALAN: Perfect, yeah.
 There's probably some question being asked, if touching the black line, and it happens to be a couple of sprites, each of which is just literally a vertical black line we're probably asking a question like, are you touching it?
 Is the distance to it zero or close to zero?
 And if so, we just ignore the left or the right arrow at that point.
@@ -1092,7 +1159,8 @@ Yeah and back.
 Oh are you scratching?
 OK, sure.
 Let's go on.
-AUDIENCE: [INAUDIBLE] DAVID MALAN: Sorry, say a little louder.
+AUDIENCE: [INAUDIBLE]
+DAVID MALAN: Sorry, say a little louder.
 AUDIENCE: Presumably it's continually looking for you to hit the arrow keys and then moving when you do.
 DAVID MALAN: Exactly.
 It's continually, forever listening for the arrow keys up, down, left, right, and if the up arrow is pressed, we're probably changing the y by a positive value.
@@ -1136,7 +1204,8 @@ And indeed we'll see there's a puzzle piece that can do exactly that technically
 Let's look at the code.
 The way we ourselves can implement exactly that idea bounce is just with a little bit of logic.
 So here's what this version of the program is doing.
-It's moving Yale by default to 0,0 just to arbitrarily put it somewhere, pointing it direction 90 degrees, which means just horizontally, essentially, and then it's forever doing this: if touching the left wall or touching the right wall, here's our translation of bounce.
+It's moving Yale by default to 0,0 just to arbitrarily put it somewhere, pointing it direction 90 degrees, which means just horizontally, essentially,
+and then it's forever doing this: if touching the left wall or touching the right wall, here's our translation of bounce.
 We're just turning 180 degrees.
 And the nice thing about that is we don't have to worry if we're going from right to left or left to right.
 180 degrees is going to work on both of the walls.
@@ -1176,9 +1245,11 @@ AUDIENCE: Celeste.
 DAVID MALAN: Come a little closer, actually.
 Sorry, hard to hear here.
 All right, round of applause here if we could, too.
-[APPLAUSE] OK, sorry, what was your name?
+[APPLAUSE]
+OK, sorry, what was your name?
 AUDIENCE: Celeste.
-DAVID MALAN: Ceweste AUDIENCE: Celeste.
+DAVID MALAN: Ceweste
+AUDIENCE: Celeste.
 DAVID MALAN: Celeste.
 AUDIENCE: Yes.
 DAVID MALAN: Come on over.
@@ -1190,25 +1261,31 @@ The goal at hand is to initially move the Harvard crest to the sprite all the wa
 So if you're up for it, you can use just these arrow keys up, down, left, right.
 You'll be controlling the Harvard sprite and if we could raise the volume just a little bit, we'll make this our final example.
 Here we go, clicking the green flag.
-[MUSIC PLAYING] Feeling ready?
+[MUSIC PLAYING]
+Feeling ready?
 AUDIENCE: Yep.
 DAVID MALAN: Spacebar.
-[MUSIC - MC HAMMER, "U CAN'T TOUCH THIS"] MC HAMMER: (SINGING) Can't touch this.
+[MUSIC - MC HAMMER, "U CAN'T TOUCH THIS"]
+MC HAMMER: (SINGING) Can't touch this.
 You can't touch this.
 You can't touch this.
 Can't touch this.
-My, my, my, my music-- DAVID MALAN: Excellent.
+My, my, my, my music--
+DAVID MALAN: Excellent.
 MC HAMMER: (SINGING) so hard.
 Makes me want to say, oh my Lord.
-Thank you for blessing me-- DAVID MALAN: Two Yales now.
+Thank you for blessing me--
+DAVID MALAN: Two Yales now.
 MC HAMMER: (SINGING) Feels good when you know you're down.
-A super dope homeboy-- AUDIENCE: Oh!
+A super dope homeboy--
+AUDIENCE: Oh!
 DAVID MALAN: Oh!
 Keep going.
 MC HAMMER: (SINGING) You can't touch this.
 I told you, homeboy.
 Can't touch this.
-Yeah, that's how living-- DAVID MALAN: All right.
+Yeah, that's how living--
+DAVID MALAN: All right.
 MC HAMMER: (SINGING) Can't touch this.
 Look at my eyes, man.
 You can't touch this.
@@ -1217,19 +1294,23 @@ You can't touch this.
 Fresh new kicks and pants.
 You got it like that and you know you want to dance.
 So move out of your seat and get a fly girl and catch this beat.
-[LAUGHING] Hold on.
+[LAUGHING]
+Hold on.
 Pump a little bit and let them know what's going on like that, like that.
 Cold on a mission, so fall on back.
-Let them know that you're too-- DAVID MALAN: There you go.
+Let them know that you're too--
+DAVID MALAN: There you go.
 There you go.
-[APPLAUSE] MC HAMMER: (SINGING) Can't touch this.
+[APPLAUSE]
+MC HAMMER: (SINGING) Can't touch this.
 Why you standing there, man?
 You can't touch this.
 Yo, sound the bell.
 School's in, sucker.
 Can't touch this.
 Give me a song or rhythm, making them sweat that's what give them.
-[CHEERING] They know.
+[CHEERING]
+They know.
 You talking the Hammer when you're talking about a show.
 That's hyped and tight.
 Singers are sweating so them a wipe or a tame to learn.
@@ -1237,7 +1318,8 @@ DAVID MALAN: Second to last level.
 Oh!
 MC HAMMER: (SINGING) That chart's legit.
 Either work hard or you might as well quit.
-That word because you know-- DAVID MALAN: Oh!
+That word because you know--
+DAVID MALAN: Oh!
 Keep going, keep going!
 Yes!
 MC HAMMER: (SINGING) You can't touch this.
@@ -1248,7 +1330,8 @@ Go, go, go!
 Oh.
 One more.
 Yes!
-[CHEERING] There you go.
+[CHEERING]
+There you go.
 MC HAMMER: (SINGING) Stop, Hammer time.
 "Go with the flow," it is said.
 If you can't groove to this, then you're probably dead.
@@ -1258,8 +1341,10 @@ For a winner.
 Dance to this and you're going to get thinner.
 Now move, slide your rump.
 Just for a minute let's all do the bump.
-[CHEERING] DAVID MALAN: Yes!
-[APPLAUSE] Congratulations.
+[CHEERING]
+DAVID MALAN: Yes!
+[APPLAUSE]
+Congratulations.
 All right, that's it for CS50.
 Welcome to the class.
 We'll see you next time.
